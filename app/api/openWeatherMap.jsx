@@ -12,10 +12,14 @@ module.exports = {
                 appid: API_KEY,
                 units: 'metric'
             }
-        }).then(function(response) {
-            return response.data.main.temp;
-        }).catch(function(error) {
-            console.log(error);
+        }).then(function(res) {
+            if (res.response.data.cod && res.response.data.message) {
+                throw new Error(res.response.data.message);
+            } else {
+                return res.data.main.temp;
+            }
+        }, function(res) {
+            throw new Error(res.response.data.message);
         });
     }
 };

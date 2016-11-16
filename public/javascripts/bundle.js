@@ -21519,7 +21519,7 @@
 	        { className: 'row' },
 	        React.createElement(
 	          'div',
-	          { className: 'small-centered large-4 medium-6 columns' },
+	          { className: 'medium-6 medium-centered columns' },
 	          this.props.children
 	        )
 	      )
@@ -26557,7 +26557,7 @@
 	            if (isLoading) {
 	                return React.createElement(
 	                    'h3',
-	                    null,
+	                    { className: 'text-center' },
 	                    'Fetching weather...'
 	                );
 	            } else if (temp && location) {
@@ -26568,11 +26568,6 @@
 	        return React.createElement(
 	            'div',
 	            null,
-	            React.createElement(
-	                'h2',
-	                null,
-	                'Weather Component'
-	            ),
 	            React.createElement(WeatherForm, { onSearch: this.handleSearch }),
 	            renderMessage()
 	        );
@@ -26602,7 +26597,7 @@
 	      null,
 	      React.createElement(
 	        "h2",
-	        null,
+	        { className: "text-center" },
 	        "Get Weather"
 	      ),
 	      React.createElement(
@@ -26614,7 +26609,7 @@
 	          null,
 	          React.createElement(
 	            "button",
-	            null,
+	            { className: "expanded button hollow" },
 	            "Get weather"
 	          )
 	        )
@@ -26629,26 +26624,26 @@
 /* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var React = __webpack_require__(8);
 
 	var WeatherMessage = React.createClass({
-	  displayName: 'WeatherMessage',
+	  displayName: "WeatherMessage",
 	  render: function render() {
 	    var _props = this.props,
 	        temp = _props.temp,
 	        location = _props.location;
 
 	    return React.createElement(
-	      'div',
+	      "div",
 	      null,
 	      React.createElement(
-	        'h2',
-	        null,
-	        'It\'s ',
+	        "h2",
+	        { className: "text-center" },
+	        "It's ",
 	        temp,
-	        ' in ',
+	        "\xB0C in ",
 	        location
 	      )
 	    );
@@ -28170,17 +28165,79 @@
 /* 265 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var React = __webpack_require__(8);
 
 	var About = React.createClass({
-	  displayName: 'About',
+	  displayName: "About",
 	  render: function render() {
 	    return React.createElement(
-	      'h2',
-	      null,
-	      'About Component'
+	      "div",
+	      { className: "row" },
+	      React.createElement(
+	        "div",
+	        { className: "text-center" },
+	        React.createElement(
+	          "h1",
+	          null,
+	          "This is an React Weather App"
+	        ),
+	        React.createElement(
+	          "h4",
+	          null,
+	          "I used the API of OpenWeatherMap for searching the weather by city name"
+	        ),
+	        React.createElement(
+	          "p",
+	          null,
+	          "Some of the technologies used to built this project are"
+	        )
+	      ),
+	      React.createElement(
+	        "div",
+	        { className: "small-up-2 medium-up-2" },
+	        React.createElement(
+	          "div",
+	          { className: "column" },
+	          React.createElement("img", { className: "thumbnail", src: "http://devicon.fr/devicon.git/icons/react/react-original.svg" }),
+	          React.createElement(
+	            "h3",
+	            { className: "text-center" },
+	            "ReactJS"
+	          )
+	        ),
+	        React.createElement(
+	          "div",
+	          { className: "column" },
+	          React.createElement("img", { className: "thumbnail", src: "http://devicon.fr/devicon.git/icons/nodejs/nodejs-original.svg" }),
+	          React.createElement(
+	            "h3",
+	            { className: "text-center" },
+	            "NodeJS"
+	          )
+	        ),
+	        React.createElement(
+	          "div",
+	          { className: "column" },
+	          React.createElement("img", { className: "thumbnail", src: "http://devicon.fr/devicon.git/icons/foundation/foundation-original.svg" }),
+	          React.createElement(
+	            "h3",
+	            { className: "text-center" },
+	            "Foundation"
+	          )
+	        ),
+	        React.createElement(
+	          "div",
+	          { className: "column" },
+	          React.createElement("img", { className: "thumbnail", src: "http://devicon.fr/devicon.git/icons/heroku/heroku-original.svg" }),
+	          React.createElement(
+	            "h3",
+	            { className: "text-center" },
+	            "Heroku"
+	          )
+	        )
+	      )
 	    );
 	  }
 	});
@@ -28212,7 +28269,7 @@
 	      React.createElement(
 	        'p',
 	        null,
-	        'Here are a few locations to try it out'
+	        'Here are a few example locations to try it out'
 	      ),
 	      React.createElement(
 	        'ol',

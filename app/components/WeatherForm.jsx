@@ -9,11 +9,11 @@ let WeatherForm = React.createClass({
   render() {
     return (
       <div>
-          <h2>Get Weather</h2>
+          <h2 className="text-center">Get Weather</h2>
           <form onSubmit={this.onSearchLocation}>
             <input type="text" placeholder="Enter city name" ref="location"></input>
             <div>
-              <button>Get weather</button>
+              <button className="expanded button hollow">Get weather</button>
             </div>
           </form>
       </div>
